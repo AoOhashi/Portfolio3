@@ -1,0 +1,686 @@
+﻿@charset "UTF-8";
+
+/*ウィンドウ幅が901px以上の場合に適用するCSS*/
+@media screen and (min-width:901px)
+{
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    header {
+        width: 100%;
+    }
+    
+    .top-box {
+        width 80%;
+        display: flex;
+        height: 43vw;
+        background-image: url(../images/top.jpg);
+        background-attachment: fixed;
+        background-size:cover;
+        animation-name:fadeDownAnime;
+        animation-duration:2s;
+        animation-fill-mode:forwards;
+        opacity:0;
+    }
+    
+    @keyframes fadeDownAnime {
+        from {
+                opacity: 0;
+                transform: translateY(-100px);
+    }
+        to {
+                opacity: 1;
+                transform: translateY(0);
+        }
+    }
+    
+    .ea-box {
+        width: 2vw;
+        height: 2vw;
+    }
+    
+    .ea-box img {
+        position: relative;
+        top: 0.2vw;
+        left: 18vw;
+        width: 2vw;
+        height: 2vw;
+        animation: rotate-anime 3s linear infinite;
+    }
+    
+    @keyframes rotate-anime {
+        0%  {transform: rotate(0);}
+        100%  {transform: rotate(360deg);}
+}
+    
+    .top-box nav {
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        border-color: aqua;
+    }
+    
+    .top-box nav ul {
+        display: flex;
+    }
+    
+    .top-box nav ul li {
+        list-style-type: none;
+        width: 10vw;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    
+    .top-box nav ul li a {
+        display: inline-block;
+	   transition: all .3s ease 0s;
+        text-decoration: none;
+        font-size: 1.6vw;
+        font-weight: 600;
+        color: #fff;
+        text-shadow: 0 0 15px rgba(255, 255, 255, .5),
+               0 0 30px rgba(255, 255, 255, .5),
+               0 0 40px rgba(52, 152, 219, 1),
+               0 0 50px rgba(52, 152, 219, 1),
+               0 0 60px rgba(52, 152, 219, 1),
+               0 0 70px rgba(52, 152, 219, 1);
+            
+    }
+    
+    .top-box nav ul li a:hover {
+        cursor: pointer;
+	   text-shadow: 1px 1px 3px #000;
+    }
+    
+    .scroll {
+        position: inherit;
+  margin     : auto;
+  width      : 99.8%;
+        height: 3vw;
+  font-size  : 10%;
+  line-height: 1.5em;
+  text-align : center;
+  border     : 1px solid #666;
+  color      : #000000;
+  background : #fff;
+  overflow   : hidden;
+}
+.scroll span{
+  display     : inline-block;
+  padding-left: 100%;
+  white-space : nowrap;
+  line-height : 1em;
+  animation   : scrollAnime 4s linear infinite;
+}
+@keyframes scrollAnime{
+    0% { transform: translateX(0)}
+  100% { transform: translateX(-100%)}
+}
+    
+    .scroll span img {
+        height: 3vw;
+    }
+    
+    .main {
+        width: 100%;
+    }
+    
+/*    動画*/
+    .video-box {
+        width: 100%;
+        background-image: linear-gradient(90deg, rgba(85, 85, 85, 1), rgba(0, 0, 0, 1));
+         background-size: 200% 200%;
+        /*サイズを大きくひきのばす*/
+        animation: bggradient 20s ease infinite;
+    }
+
+@keyframes bggradient{
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+    }
+    
+    .flex-video {
+        display: flex;
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .flex-video video {
+        margin-top: 1.4vw;
+    }
+    
+    .flex-video a img {
+        margin-top: 3.4vw;
+        margin-left: 4vw;
+    }
+    
+    .price {
+        width: 23vw;
+        margin-top: 2.11vw;
+        margin-left: 4vw;
+    }
+    
+    .price h2 {
+        width: 22vw;
+        margin-top: 4vw;
+        margin-bottom: 1vw;
+        text-align: center;
+        font-weight: 600;
+        color: white;
+        /* preview */
+        color: white;
+        /* text-shadow */
+        text-shadow: 46px 8px 2px rgba(0,0,0,0.3);
+    }
+    
+    .price p {
+        width: 20vw;
+        margin-top: 1vw;
+        text-align: center;
+        font-weight: 300;
+        color: white;
+    }
+    
+    .price a {
+        position: relative;
+        top: 1vw;
+        left: -1vw;
+    }
+    
+ /*    https://cssbuttons.app/buttons/31*/
+    .bn31 {
+        background-image: linear-gradient(to right, #006175 0%, #00a950 100%);
+        border-radius: 40px;
+        box-sizing: border-box;
+        color: #00a84f;
+        display: block;
+        height: 50px;
+        font-size: 1.4em;
+        padding: 4px;
+        position: relative;
+        text-decoration: none;
+        width: 7em;
+		border-radius: 3.5vw;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        z-index: 2;
+        transition: background 2s;
+    }
+
+    .bn31:hover {
+        color: #fff;
+        transition: background 1s;
+    }
+
+    .bn31 .bn31span {
+    align-items: center;
+    background: #0e0e10;
+    border-radius: 3.5vw;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    transition: background 2s;
+    width: 100%;
+    }
+
+    .bn31:hover .bn31span {
+        background: transparent;
+        transition: background 1s;
+    }
+    
+/*    ハイライト*/
+    
+    .highlight {
+        width: 100%;
+        margin-top: -1.4vw;
+        padding-bottom: 1.4vw;
+         background-image: linear-gradient(90deg, rgba(61, 200, 194, 1), rgba(61, 156, 194, 1) 50%, rgba(197, 125, 233, 1));
+         background-size: 200% 200%;/*サイズを大きくひきのばす*/
+        animation: bggradient 20s ease infinite;
+        }
+
+    @keyframes bggradient{
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+    }
+    
+    .highlight h2 {
+        width: 24vw;
+        padding-top: 1vw;
+        margin-top: 1.4vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.4vw;
+        text-align: center;
+        font-weight: 600;
+        color: black;
+        /* preview */
+        /* text-shadow */
+        text-shadow: 46px 8px 2px rgba(0,0,0,0.3);
+    }
+    
+    .flex-highlight {
+        display: flex;
+        justify-content: space-around;
+        width: 94%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .highlight-box .hover .hover-img  a Img {
+        width: 652px;
+    }
+    
+    .hover {
+        position: relative;
+        width: 652px;
+        height: 366px;
+        overflow: hidden;
+    }
+        .hover .hover-img {
+        margin: 0;
+        padding: 0;
+    }
+        .hover-img img {
+        width: 100%;
+        height: 100%;
+    }
+        .hover .hover-text {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        color: #fff;
+        background-color: rgba(0,0,0,0.65);
+        /*要素の大きさを0にしt表示させない*/
+        transform: scale(0);
+        /*ホバーの動き方*/
+        transition: .35s ease-in-out;
+    }
+    .hover .hover-text .text1 {
+        font-size: 22px;
+        padding-top: 120px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+    }
+    .hover .hover-text .text2 {
+        font-size: 16px;
+        padding-top: 0px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 0px;
+    }
+/*ホバーエフェクト*/
+    .hover:hover .hover-text {
+  /*要素の大きさを1にして表示*/
+    transform: scale(1);
+    }
+    
+/*    動画２*/
+    .demo-play {
+        width: 100%;
+        margin-top: -1.4vw;
+        background-image: linear-gradient(90deg, rgba(0, 255, 243, 1), rgba(252, 146, 146, 1));
+         background-size: 200% 200%;/*サイズを大きくひきのばす*/
+        animation: bggradient 20s ease infinite;
+    }
+
+    @keyframes bggradient{
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+        }
+    
+        .flex-demo {
+            display: flex;
+        }
+    
+    .scroll-fade {
+        width: 485px;
+        height: 567px;
+    }
+    
+    .demo-play h2 {
+        width: 20vw;
+        padding-top: 1vw;
+        margin-top: 1.4vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.4vw;
+        text-align: center;
+        color: black;
+        /* preview */
+        /* text-shadow */
+        text-shadow: 46px 8px 2px rgba(0,0,0,0.3);
+    }
+    
+    .demo-play video {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .demo-play p {
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 1vw;
+    }
+    
+/*    新要素*/
+    .new-box {
+        width: 100%;
+        margin-top: -1.4vw;
+        background-image: linear-gradient(90deg, rgba(40, 0, 255, 1), rgba(255, 160, 71, 1));
+         background-size: 200% 200%;/*サイズを大きくひきのばす*/
+    animation: bggradient 20s ease infinite;
+    }
+
+    @keyframes bggradient{
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+    
+    .new-box h2 {
+        width: 20vw;
+        padding-top: 1vw;
+        margin-top: 1.4vw;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        color: black;
+        /* preview */
+        /* text-shadow */
+        text-shadow: 46px 8px 2px rgba(0,0,0,0.3);
+    }
+    
+    .flex-new {
+        display: flex;
+        justify-content: space-around;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hover-box {
+        
+    }
+    
+    .hover-box img {
+        width: 25vw;
+    }
+    
+    .hover-box p {
+        position: relative;
+        top: -4vw;
+        width:10vw;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        color: aliceblue;
+        text-shadow: 46px 8px 2px rgba(0,0,0,0.3);
+    }
+    
+    .img_wrap {
+        border: 1px solid #ddd;
+        width: 319px;
+        height: 400px;
+        margin: 20px auto 0;
+        margin-bottom: 2vw;
+        transition-duration: 0.5s;
+    }
+    
+    .img_wrap img{
+        width: 100%;
+        cursor: pointer;
+    }
+    
+    .img_wrap:hover{
+        box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+        transform: translateY(-25px);
+        transition-duration: 0.5s;
+    }
+    
+/*    レジェンド*/
+    .icon-box {
+        width: 100%;
+        padding-bottom: 1.4vw;
+        margin-top: -1.4vw;
+        background-image: linear-gradient(90deg, rgba(233, 233, 233, 1), rgba(172, 172, 172, 1));
+         background-size: 200% 200%;/*サイズを大きくひきのばす*/
+  animation: bggradient 20s ease infinite;
+}
+
+@keyframes bggradient{
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+    }
+    
+    .icon h2 {
+        width: 20vw;
+        padding-top: 1vw;
+        margin-top: 1.4vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.4vw;
+        text-align: center;
+        color: black;
+        /* preview */
+        /* text-shadow */
+        text-shadow: 46px 8px 2px rgba(0,0,0,0.3);
+    }
+    
+    .icon-flex {
+        display: flex;
+    }
+    
+    .slider{
+        position: relative;
+        top: -1vw;
+        left: 5vw;
+        overflow: hidden;
+        width: 45vw;
+        height: 25vw;
+        background-color: #000;
+    }
+
+/* スライダー画像 */
+.slider .image{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+/*
+  ①スライド画像
+  表示する画像を定義
+*/
+.slider .image:nth-of-type(1){
+    background-image: url(../images/legend1.png);
+    animation-delay: 5s;
+}
+.slider .image:nth-of-type(2){
+  animation-delay: 10s;
+  background-image: url(../images/legend2.png);
+}
+.slider .image:nth-of-type(3){
+  animation-delay: 15s;
+  background-image: url(../images/legend3.png);
+}
+
+/*
+  ②アニメーション設定
+  animation-durationのみ変更
+*/
+.slider .image{
+  animation-name: anime;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;  /* ①で設定したanimation-delayを合計を挿入 */
+}
+
+/* アニメーション定義 */
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.18);
+  }
+}
+    
+    .fut-box {
+        width: 40vw;
+        margin-left: 15vw;
+    }
+    
+    .fut-box img {
+        width: 30vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .fut-box p {
+        width: 30vw;
+        padding-top: 4vw;
+        margin-left: 1vw;
+        margin-right: auto;
+    }
+    
+    .fut-box a{
+        position: relative;
+        top: 5vw;
+        left: -5.5vw;
+    }
+    
+/*    fut説明*/
+    .fut2-box {
+        width: 100%;
+        padding-top: 1.4vw;
+        padding-bottom: 1.4vw;
+        background-color: black;
+    }
+    
+    .fut2 p {
+        width: 90vw;
+        margin-top: 1.4vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.4vw;
+        line-height: 1.6;
+        font-size: 1vw;
+        color: white;
+        font-weight: 500;
+    }
+    
+    .fut2 p a {
+        text-decoration: none;
+        color: greenyellow;
+    }
+    
+    /*フッター*/
+    footer {
+        width: 100%;
+        height: 35vw;
+        background-image: url(../images/fifa-22-image3.jpg);
+        background-size:cover;
+        color: white;
+    }
+    
+    .sns-box {
+        width: 16vw;
+        margin-left: 83vw;
+        padding-top: 26vw;
+        text-decoration: none;
+        font-size: 4vw;
+        
+    }
+    
+    .sns-box a {
+        width: 25vw;
+        color: white;
+        transition: 1s;
+    }
+    
+    .sns-box a:nth-child(1):hover {
+        color: blue;
+        transition: 1s;
+    }
+    
+    .sns-box a:nth-child(3):hover {
+        color: red;
+        transition: 1s;
+    }
+    
+    .sns-box a li {
+        width: 20vw;
+        padding-top: 25vw;
+        margin-left: 1vw;
+        color: white;
+    }
+    
+    footer p {
+        width: 17vw;
+        margin-left: 58vw;
+        text-align: center;
+    }
+    
+    footer p small {
+        
+    }
+    
+}
+
+    
+
+    

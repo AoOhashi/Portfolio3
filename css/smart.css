@@ -1,0 +1,715 @@
+﻿@charset "UTF-8";
+
+/*ウィンドウ幅が480px以下の場合に適用するCSS*/
+@media screen and (max-width:600px)
+{
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /*    topimage*/
+    .topimage-box {
+        width: 100%;
+        height: 60vw;
+        background-image: url(../images/dean.jpg);
+        background-attachment: fixed;
+        background-size:contain;
+    }
+    
+    header {
+        display: flex;
+    }
+    
+/*    logo*/
+    h1 {
+        margin-bottom: 1vw;
+    }
+    
+    h1 img {
+        position: absolute;
+        top: 1vw;
+        left: 0.2vw;
+        width: 35vw;
+    }
+    
+    .nav-box {
+        display: flex;
+}
+    
+/*    ハンバーガーメニュー*/
+    #hamburger .btn-gNav{
+  position: absolute;
+  top: 1vw;
+  left: 91vw;;
+  width: 30px;
+  height: 24px;
+  z-index: 3;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+#hamburger .btn-gNav span{
+  position: absolute;
+  width:    100%;
+  height: 4px;
+  background: #666;
+  border-radius: 10px;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+#hamburger .btn-gNav span:nth-child(1) {
+  top:0;
+}
+#hamburger .btn-gNav span:nth-child(2) {
+  top:10px;
+}
+#hamburger .btn-gNav span:nth-child(3) {
+  top:20px;
+}
+#hamburger .btn-gNav.open span:nth-child(1){
+  background: #fff;
+  top: 6px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform   : rotate(-45deg);
+  transform        : rotate(-45deg);
+}
+#hamburger .btn-gNav.open span:nth-child(2),#hamburger .btn-gNav.open span:nth-child(3){
+  top: 6px;
+  background :#fff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform   : rotate(45deg);
+  transform        : rotate(45deg);
+}
+#gNav{
+  position: fixed;
+  top: 0;
+  right: -100%; /*navの出てくるところ top left right*/
+  width: 100%; /*navの大きさ*/
+  height: 100%;
+  background: #444;
+  font-size: 16px;
+  box-sizing: border-box;
+  z-index: 2;
+  padding-top: 50px;
+  transition: .3s; /*出てくる時間*/
+}
+#gNav.open{
+  right: 0%;/*navの出てくるところ top left right*/
+}
+#gNav .gNav-menu{
+  width: 100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /*justify-content: center;*/
+}
+#gNav .gNav-menu li{
+  display: block;
+  padding : 20px 30px;
+}
+
+    
+    #gNav .gNav-menu li a{
+  color: green;
+    font-size: 5vw;
+  text-decoration: none;
+    font-weight: 600;
+    text-shadow: 0 20px 10px rgba(0, 0, 0, .5);
+    font-family: 'Roboto', sans-serif;
+}
+
+
+    /*navi*/
+    /*.topimage-box nav {
+        width: 80vw;
+        margin-top: 0.4vw;
+        margin-right: ;
+        margin-left: auto;
+        margin-bottom: ;
+    }
+
+    .topimage-box nav ul {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .topimage-box nav ul li {
+        width: 10vw;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .topimage-box nav ul li a {
+        display: block;
+        margin-left: 1vw;
+        text-align: center;
+        line-height: 3;
+        color: #111111;
+        text-decoration: none;
+        background:
+        linear-gradient(currentColor 0 0) 0 100% /var(--d, 0) 1.4px no-repeat,
+        linear-gradient(currentColor 0 0) 100% calc(100% - 6px) /var(--d, 0) 1.4px no-repeat;
+        transition: 0s 0.5s, background-size 0.5s;
+    }
+    
+    .topimage-box nav ul li a:hover {
+        --d: 100%;
+        background-position: 0% calc(100% - 3px), 100% calc(100% - 3px);
+        transition: 0.5s, background-position 0.3s 0.3s;
+        color: green;
+    }*/
+    
+    /* --- 検索全体のBOX (サンプル用)--- */
+.searchArea{
+  width          : 40vw;              /* BOXの幅               */
+  height         : 25px;               /* BOXの高さ             */
+  margin         : 1vw;                /*サンプルを中心に寄せ  */
+    margin-left: 50vw;
+  letter-spacing : 0.1em;              /* 文字間隔              */
+  font-weight    : bold;               /* 太字                  */
+  line-height    : 0;                  /* 標準の行高さ          */
+}
+ 
+ /* --- テキスト入力欄のSTYLE設定 --- */
+.searchArea .searchText {
+  display        : block;              /* ブロック化            */
+  float          : left;               /* 横並び                */
+  box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
+  height         : 25px;               /* 入力の高さ            */
+  width          : 26vw;              /* 入力の幅              */
+  margin         : 0;                  /* 外余白                */
+  padding        : 0 12px;             /* 内余白                */
+  border         : 2px solid green;  /* 枠線　幅,実践,色      */
+          */
+  color          : #333;               /* 文字色                */
+  outline        : 0;                  /* 入力の薄い枠を非表示  */
+  font-size      : 13px;               /* フォントサイズ        */
+}
+ 
+ /* --- 検索ボタン欄のSTYLE設定 --- */
+.searchArea .searchButton {
+  float          : left;               /* 横並び                */
+  box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
+  height         : 25px;               /* 入力の高さ            */
+  margin         : 0;                  /* 外余白                */
+  padding        : 6px 10px;           /* 内余白                */
+  border         : none;               /* 枠線　幅,実践,色      */
+  background     : green;            /* ボタンの色            */
+  color          : #fff;               /* 文字色                */
+  cursor         : pointer;            /* カーソル設定          */
+  line-height    : 13px;               /* 1行の高さ             */
+  font-size      : 13px;               /* フォントサイズ        */
+}
+ 
+ /* --- 検索ボタン欄にフォーカスか来たとき --- */
+.searchArea .searchText:focus {
+  background     : #cfe7ff;            /* フォーカス時の背景色  */
+}
+ 
+ /* --- IEの入力エリア右側×消し -------------------------*/
+.searchArea .searchText::-ms-clear {
+  display        : none;               /* ×を消す              */
+}
+    
+/*    スクロール*/
+    .scroll {
+  margin: auto;
+  width: 100%;
+margin-top: 1vw;
+  font-size: 100%;
+  line-height: 1em;
+  text-align: center;
+border-top: 1.4px solid green;
+  border-bottom: 1.4px solid green;
+  color: red;
+  background: #fff;
+  overflow: hidden;
+        opacity: 0.8;
+        font-family: 'Roboto', sans-serif;
+}
+.scroll span{
+  display     : inline-block;
+  padding-left: 100%;
+  white-space : nowrap;
+  line-height : 1em;
+  animation   : scrollAnime 11s linear infinite;
+}
+@keyframes scrollAnime{
+    0% { transform: translateX(0)}
+  100% { transform: translateX(-100%)}
+}
+    
+/*    login*/
+    .catch-box {
+        flex-flow: wrap;
+        position: relative;
+        top: 10vw;
+        left: 3.9vw;
+        width: 0vw;
+        height: 0vw;
+        opacity: 0.8;
+        z-index: 1;
+        background-color: white;
+    }
+    
+    .catch-box p {
+        display: none;
+        width: 28vw;
+        padding-top: 2vw;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 1em;
+        color: #333;
+        text-shadow: 0 20px 10px rgba(0, 0, 0, .5);
+        font-family: 'Roboto', sans-serif;
+    }
+    
+/*    https://cssbuttons.app/buttons/31*/
+    .bn31 {
+        background-image: linear-gradient(to right, #006175 0%, #00a950 100%);
+        box-sizing: border-box;
+        color: #00a84f;
+        display: block;
+        height: 8vw;
+        font-size: 0.8em;
+        padding: 4px;
+        position: relative;
+        text-decoration: none;
+        width: 30vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 1vw;
+        text-align: center;
+        z-index: 2;
+        transition: background 2s;
+    }
+
+    .bn31:hover {
+        color: #fff;
+        transition: background 1s;
+    }
+
+    .bn31 .bn31span {
+    align-items: center;
+    background: #0e0e10;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    transition: background 2s;
+    width: 100%;
+    }
+
+    .bn31:hover .bn31span {
+        background: transparent;
+        transition: background 1s;
+    }
+    
+/*    icon*/
+    .service-box {
+        position: relative;
+        top: -8vw;
+        width: 92%;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0.9;
+        padding-bottom: 2vw;
+        background-color: white;
+    }
+    
+    .service-box h2 {
+        width: 40vw;
+        padding-top: 2vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1vw;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        color: #333;
+        font-size: 5vw;
+        text-shadow: 0 20px 10px rgba(0, 0, 0, .5);
+    }
+    
+    .icon-box {
+        display: flex;
+    }
+    
+    .icon {
+        display: flex;
+        flex-direction: row;
+        width: 20vw;
+        margin-top: 2vw;
+        margin-right: auto;
+        margin-left: 3vw;
+    }
+    
+    .icon img {
+        
+    }
+    
+    .icon p {
+    
+    }
+    
+/*    https://webparts.cman.jp/balloon/over/*/
+    .balloonoya {*/
+        position   : relative;                /* 指定した分だけ相対的に移動 */
+    }
+    .balloonoya:hover .balloon {
+        display: inline;                /* インライン要素として表示 */
+    }
+    .balloon {
+        display:
+        background-color: rgba(0, 179, 0, 0.50);       /* 背景色（透明度） */
+        display: none;
+        width:10vw;                          /* 吹き出し全体の幅 */
+        font-size: 1vw;                       /* 文字サイズ */
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        text-shadow: 0 20px 10px rgba(0, 0, 0, .5);
+    }
+    .balloon:after{
+        border-right: 12px solid rgba(0, 179, 0, 0.50);  /* 吹き出し口の幅・色 */
+        border-top: 10px solid transparent;     /* 吹き出し口の高さ１／２ */
+        border-bottom: 10px solid transparent;  /* 吹き出し口の高さ１／２ */
+        left: -12px;                            /* 吹き出し口の位置調整 */
+        top: 5%;                                /* 吹き出し口の縦位置 */
+        content: "";                       /* コンテンツの挿入 */
+        position: absolute;                /* 親要素を基準 */
+    }
+    
+    
+    .campaign-box {
+        width: 92%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10vw;
+    }
+    
+    .campaign-box h2 {
+        width: 30vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 6vw;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        color: #333;
+        font-size: 5vw;
+        text-shadow: 0 20px 10px rgba(0, 0, 0, .5);
+    }
+    
+    .campaign {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .campaign img {
+    }
+    
+    .campaign-img1 {
+        margin-bottom: 2vw;
+    }
+    
+    .campaign-img2 {
+        margin-bottom: 2vw;
+    }
+    
+    .campaign-img4 {
+        margin-top: 2vw;
+    }
+    
+    .campaign-img1:hover {
+    }
+    
+    /*news*/
+    .news-box {
+        width: 92vw;
+        margin-bottom: 10vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .news-box h2 {
+        width: 20vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 6vw;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        color: #333;
+        font-size: 5vw;
+        text-shadow: 0 20px 10px rgba(0, 0, 0, .5);
+    }
+
+    .news-box ul {
+        display: flex;
+        line-height: 2.6;
+        list-style-type: none;
+        border-bottom: 1.4px dashed green;
+    }
+    
+    .news-box ul li {
+        width: 72vw;
+        height: 10vw;
+        padding-top: 1vw;
+        line-height: 1;
+    }
+
+    .news-box ul li:nth-child(1) {
+        width: 21vw;
+        margin-left: 0.4vw;
+        margin-right: 4vw;
+        line-height: 3.5;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.6vw;
+    }
+
+    .news-box ul li a {
+        width: 14vw;
+        padding-top: 3vw;
+        color: #696969;
+        text-decoration: none;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.9vw;
+    }
+    
+    .news {
+        margin-top: 2.6vw;
+    }
+    
+/*    question*/
+    
+    .question-box {
+        width: 92%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .question-title h2{
+        width: 40vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 6vw;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        color: #333;
+        font-size: 5vw;
+        text-shadow: 0 20px 10px rgba(0, 0, 0, .5);
+    }
+    
+    .question-box h3 {
+        width: 40vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1.3vw;
+        text-align: left;
+        font-size: 3vw;
+        font-family: 'Roboto', sans-serif;
+        border-bottom: 1px solid green;
+    }
+    
+    .question {
+        width: 40vw;
+        margin-left: 3.5vw;
+        margin-bottom: 2vw;
+    }
+    
+    .question nav ul{
+        list-style-type: none;
+    }
+    
+    .question nav ul li {
+        font-size: 2vw;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .question nav ul li a {
+        display: block;
+        line-height: 2;
+        color: #111111;
+        text-decoration: none;
+        transition: 1s;
+    }
+    
+    .question nav ul li a:hover {
+        color: green;
+        transition: 1s;
+    }
+    
+/*    .policy*/
+    .policy-box {
+        width: 92%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10vw;
+    }
+    
+    .policy-title nav {
+        width: 92%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .policy-title nav ul {
+        display: flex;
+        display: none;
+        list-style-type: none;
+    }
+    
+    .policy-title nav ul li {
+        width: 20vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0.2vw;
+        text-align: center;
+        border-bottom: 1px solid green;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1vw;
+    }
+    
+    .policy-title nav ul li a {
+        display: block;
+        line-height: 2;
+        color: #111111;
+        text-decoration: none;
+        transition: 1s;
+    }
+    
+    .policy-title nav ul li a:hover {
+        color: green;
+        transition: 1s;
+    }
+    
+    .policy {
+        width: 92%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .policy nav ul {
+        list-style-type: none;
+    }
+    
+    .policy nav ul li {
+        width: 92vw;
+        font-size: 0.8vw;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .policy nav ul li a {
+        display: block;
+        line-height: 1.6;
+        color: #111111;
+        text-decoration: none;
+        transition: 1s;
+    }
+    
+    .policy nav ul li a:hover {
+        color: green;
+        transition: 1s;
+    }
+    
+    .policy-box p {
+        width: 92%;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    /*アイコン*/
+    footer {
+        display: flex;
+        width: 92%;
+        margin-top: 2vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    footer img {
+        width: 10vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    footer p {
+        width: 92%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2vw;
+    }
+    
+    footer p small {
+        width: 20vw;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+    }
+    .last-box {
+        width: 92%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .last-icon {
+        width: 53vw;
+        margin-top: 0.6vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .last-icon img {
+        width: 29vw;
+    }
+    
+    .last-icon a {
+        font-size: 7vw;
+        font-family: 'Roboto', sans-serif;
+        color: #111;
+        transition: 1s;
+    }
+    
+    .last-icon a:hover {
+        color: green;
+        transition: 1s;
+    }
+    
+/*    スムーススクロール*/
+    
+    #page-top {
+            position: fixed;
+            bottom: 20px;
+			left: 83vw;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: green;
+		}
+    
+		#page-top a {
+            display: block;
+            line-height: 5;
+            font-size: 8px;
+			color: #fff;
+			text-align: center;
+            text-decoration: none;
+		}
+    
+		#page-top a:hover {
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            color: #111;
+			background-color: green;
+}
+
+
+}
